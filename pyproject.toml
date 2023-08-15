@@ -4,13 +4,11 @@ build-backend = "hatchling.build"
 
 [project]
 name = "yaqd-proxr"
-authors = ["Blaise Thompson, Unni Kurumbail"]
+authors = [{name="Blaise Thompson"}, {name="Unni Kurumbail"}]
 description = "Yaq daemons for ProXR relay controllers."
 readme = "README.md"
 requires-python = ">=3.7"
-dependencies = [
-  "yaqd-core>=2020.06.3",
-]
+requires = ["yaqd-core>=2020.06.3", "proxr_protocol", "pySerial"]
 dynamic = ["version"]
 license="LGPL-3.0-only"
 classifiers = [
@@ -40,7 +38,7 @@ yaqd-proxr-serial = "yaqd_proxr._proxr_serial:ProxrSerial.main"
 
 [tool.black]
 line-length = 99
-target-version = ['py37', 'py38', 'py39', 'py10', 'py11']
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
 include = '\.pyi?$'
 exclude = '''
 /(
@@ -55,3 +53,7 @@ exclude = '''
   | dist
 )/
 '''
+
+[tool.hatch.version]
+path = "yaqd_proxr/__version__.py"
+
