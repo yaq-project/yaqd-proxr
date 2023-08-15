@@ -18,6 +18,7 @@ jobs:
         python -m pip install --upgrade pip!=22.1.*
         python -m pip install --upgrade mypy
         python -m pip install proxr_protocol
+        python -m pip install pySerial
         python -m pip install yaqd_core
         python -m pip install .
     - name: Run mypy
