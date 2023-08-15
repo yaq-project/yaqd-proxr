@@ -38,7 +38,7 @@ yaqd-proxr-serial = "yaqd_proxr._proxr_serial:ProxrSerial.main"
 
 [tool.black]
 line-length = 99
-target-version = ['py37', 'py38', 'py39', 'py10', 'py11']
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
 include = '\.pyi?$'
 exclude = '''
 /(
