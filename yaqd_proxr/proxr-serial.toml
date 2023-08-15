@@ -1,6 +1,6 @@
 protocol = "proxr-serial"
 doc = ""
-traits = ["is-daemon"]
+traits = ["is-daemon","has-position","is-discrete","uses-serial","uses-uart"]
 
 [links]
 source = "https://github.com/yaq-project/yaqd-proxr"
@@ -10,6 +10,17 @@ bugtracker = "https://github.com/yaq-project/yaqd-proxr/-/issues"
 PyPI = "https://pypi.org/project/yaqd-proxr"
 
 [config]
+
+[config.identifiers]
+default = {"0"=0,"1"=1}
+
+[config.bank]
+doc = "The relay bank number on the ProXR board. The underlying implementation utilizes indexing by bank and relay number within the bank (eg. bank 2 relay 6)."
+type=["int"]
+
+[config.relay]
+doc = "The relay number within a bank on the ProXR board. The underlying implementation utilizes indexing by bank and relay number within the bank (eg. bank 2 relay 6)."
+type = ["int"]
 
 [state]
 
