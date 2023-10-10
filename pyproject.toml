@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "yaqd-proxr"
-authors = ["Blaise Thompson, Unni Kurumbail"]
+authors = [{name="Blaise Thompson"}, {name="Unni Kurumbail"}]
 description = "Yaq daemons for ProXR relay controllers."
 readme = "README.md"
 requires-python = ">=3.7"
